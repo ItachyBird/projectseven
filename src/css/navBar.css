@@ -1,0 +1,160 @@
+.nav-bar {
+  background-color: white; /* Background for better visibility */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for the navbar */
+}
+
+.logo {
+  color: #0000ff;
+  font-size: 20px;
+}
+
+.nav-links {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item a {
+  color: #0000ff;
+  text-decoration: none;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Underline active link */
+.nav-item a.active {
+  border-bottom: 1px solid #0000ff; /* Smaller underline */
+}
+
+.nav-item:hover a {
+  color: #0056b3; /* Slightly darker blue on hover */
+}
+
+.nav-item i {
+  font-size: 24px; /* Font Awesome icon size */
+}
+
+.nav-item .nav-text {
+  color: #0000ff;
+  font-size: 14px;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  bottom: -25px;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.nav-item:hover .nav-text {
+  opacity: 1;
+  visibility: visible;
+}
+
+.search-bar-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #0000ff;
+}
+
+/* Login Button Styling */
+/* Login Button Styling */
+.login-container {
+  margin-left: 10px; /* Space between burger and login button */
+}
+
+.login-button {
+  color: #0000ff;
+  padding: 10px; /* Increased padding for a round shape */
+  border: 1px solid #0000ff;
+  border-radius: 50%; /* Makes the button round */
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  display: flex; /* Center icon */
+  justify-content: center; /* Center icon */
+  align-items: center; /* Center icon */
+  width: 40px; /* Fixed width for round shape */
+  height: 40px; /* Fixed height for round shape */
+}
+
+.login-button:hover {
+  background-color: #0000ff;
+  color: white;
+}
+
+/* Adjust icon size */
+.login-button i {
+  font-size: 18px; /* Set the size of the icon */
+}
+
+
+/* Mobile Burger Menu */
+.burger-menu {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.burger-icon {
+  color: #0000ff;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide nav links on mobile */
+  }
+
+  .burger-menu {
+    display: block; /* Show burger menu icon */
+  }
+
+  .login-container {
+    display: flex; /* Ensure login container is displayed */
+    align-items: center; /* Center the login button */
+  }
+
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align items to the right */
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: calc(100% - 20px); /* Reduce width to accommodate padding */
+    background-color: rgb(194, 194, 194); /* Background color */
+    backdrop-filter: blur(5px);
+    padding: 20px 10px; /* Add padding on top/bottom and right */
+    box-sizing: border-box; /* Ensure padding is included in width */
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end; /* Right-align items */
+  }
+
+  .search-bar-container {
+    display: none; /* Hide search bar on mobile */
+  }
+}

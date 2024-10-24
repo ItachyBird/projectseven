@@ -1,0 +1,34 @@
+.post {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+  }
+  
+  .post-header {
+    font-weight: bold;
+  }
+  
+  .post-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .post-description {
+    margin: 10px 0;
+  }
+  
+  .post-actions {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .like-button, .comment-button, .share-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #007bff; /* Instagram-like color */
+  }
+  
